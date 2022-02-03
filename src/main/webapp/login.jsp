@@ -10,17 +10,19 @@
 <html>
 <head>
     <title>Login</title>
+    <%@include file="partials/head.jsp"%>
 </head>
 <body>
-
-<form method="POST" action="${pageContext.request.contextPath}/login.jsp">
-    <label for="username">Username:</label>
-    <input id="username" name="username" placeholder="Enter your Username">
-    <label for="password">Password:</label>
-    <input id="password" name="password" placeholder="Enter your Password">
-    <input type="submit"/>
-</form>
-
+<%@include file="partials/navbar.jsp"%>
+<section>
+    <form method="POST" action="${pageContext.request.contextPath}/login.jsp">
+        <label for="username">Username:</label>
+        <input id="username" name="username" placeholder="Enter your Username">
+        <label for="password">Password:</label>
+        <input id="password" name="password" placeholder="Enter your Password">
+        <input type="submit"/>
+    </form>
+</section>
 <c:choose>
     <c:when test="${param.username.equals('admin') && param.password.equals('password')}">
         <c:redirect url="/profile.jsp"/>

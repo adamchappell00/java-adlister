@@ -10,8 +10,10 @@
 <html>
 <head>
     <title>Profile</title>
+    <%@include file="partials/head.jsp"%>
 </head>
 <body>
+<%@include file="partials/navbar.jsp"%>
 <div>Woohoo!</div>
 </body>
 </html>
